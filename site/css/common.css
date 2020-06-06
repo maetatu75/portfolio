@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+*{/*　ユニバーサル(全称)セレクタ　*/
+  margin: 0;
+  padding: 0;
+}
+
+/* タイプ(要素/タグ)セレクタ */
+body{
+  color: #000;
+  text-align: left;
+  line-height: 1;
+  background-color: rgb(102, 102, 102);
+}
+div#wrap{
+  width: 400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: #fff;
+}
+
+
+header{
+  margin: 0 0 20px 0;
+  background-color: #7cf32c;
+  border-radius: 0 0 30px 30px;
+
+}
+  header h1{
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+
+nav{
+  margin: 0 0 20px 0;
+}
+  nav ul{
+    list-style-type: none;
+    text-align: center;
+  }
+    nav ul li{
+      display: inline-block;
+    }
+      nav ul li a{
+        margin: 0 17px;
+        line-height: 1.6rem;
+        color: #000;
+        text-decoration: none;
+      }
+      nav ul li a:hover{
+        opacity: 0.5;
+      }
+
+
+main{}
+  main section{
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    border-bottom: 2px dashed #8effb0;
+  }
+
+  main section:nth-child(1) , 
+  main section:first-child{
+    padding-top: 20px;
+    border-top: 2px dashed #8effb0;
+  }
+
+    main section h2{
+      width: 150px;
+      float: left;
+      margin: 0 0 10px 0;
+      padding: 10px 10px 10px 15px;
+      border-radius: 30px 0 0 30px;
+      font-size: 1rem;
+      font-weight: normal;
+      background-color: rgb(250, 75, 75);
+      box-sizing: border-box;
+    }
+    main section p{
+      width: 250px;
+      float: left;
+      margin: 0 0 10px 0;
+      padding: 10px 10px 10px 15px;
+      border-radius: 0 30px 30px 0;
+      background-color: rgb(255, 117, 117);
+      box-sizing: border-box;
+    }
+    main section div{
+      
+    }
+
+
+
+aside{}
+    aside figure{}
+    aside figure img{}
+    aside figure#aside01 img{
+      width: 100%;
+    }
+      aside figure figcaption{}
+
+
+
+footer{
+  margin:  20px 0 0 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #7cf32c;
+  border-radius: 30px 30px 0 0;
+}
+
+/* CSS3のプロパティ */
+
+/* ベース */
+.box{
+  display: table-cell;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #30d683;
+}
+
+/* 角を丸くする */
+.radius{
+  border-radius: 30px 30px 30px 30px;
+}
+
+/*ブロックに影をつける*/
+.b-shadow{
+  box-shadow: 2px 2px 5px #000;
+}
+
+/*文字に影をつける*/
+.t-shadow{
+  text-shadow: 0px 0px 5px #000;
+  color: #fff;
+  text-align: center;
+
+  line-height: 0;
+  clear: both;
+  padding-top: 10px;
+}
+
+/*背景をグラデーション*/
+.gradient{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+50,ff7c00+51,ff7f04+100;Orange+Gloss */
+  background: #ffb76b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffb76b 0%,#ffa73d 50%,#ff7c00 51%,#ff7f04 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 50%,#ff7c00 51%,#ff7f04 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /* IE6-9 */
+}
+
+/*変形(回転)*/
+.rotate{
+  /*ベンダープレフィックス*/
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+/*アニメーション*/
+.trans01{
+  width: 400px;
+  background-color: #8eb9ff;
+  font-size: 1rem;
+  position: relative;
+  left: 0;
+  border-radius: 30px;
+  font-weight: normal;
+  border: 0px solid #000;
+
+  /*transition*/
+  transition:
+    width 0.5s linear,
+    background-color 0.5s linear,
+    font-size 0.5s linear,
+    left 0.5s linear,
+    border-radius 0.5s linear,
+    font-weight 0.5s linear,
+    border 0.5s linear
+  ;
+}
+
+.trans01:hover{
+  width: 300px;
+  background-color: #ff8eb9;
+  font-size: 3rem;
+  left: 50px;
+  border-radius: 150px;
+  font-weight: bold;
+  border: 10px solid #000;
+}
+
+.trans02{
+  display: block;
+  margin-top: 10px;
+  
+  height: 0;
+  padding: 150px 0;
+  line-height: 0;
+
+  background-image:url(../images/trans01.jpg) ;
+
+  transition: 
+    background-image 0.5s linear
+  ;
+}
+
+.trans02:hover{
+  background-image: url(../images/trans02.jpg);
+}
+
+/*背景画像*/
+.back{
+  clear: both;
+  padding: 10px;
+  background-image: url(../images/back.gif);
+}
+
+/*透明(全部)*/
+.opa{
+  opacity: 0.5;
+}
+
+/*透明(背景)*/
+.rgba{
+  background-color: rgba(255, 136, 0, 0.5);
+}
+
+/*アクア調ボタン*/
+ul.aqua{
+  list-style-type: none; /*liの・を消す*/
+  text-align: center;
+  
+}
+
+  ul.aqua li{
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+    ul.aqua li a{
+      margin: 0 5px;
+      padding: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 50%,#ff7c00 51%,#ff7f04 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      border: 1px rgba(255, 136, 0, 0.5) solid;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.8);;
+      position: relative;
+      top: 0;
+      transition: top 0.05s linear;
+    }
+
+    ul.aqua li a:hover{
+      top: -2px;
+    }
+
+    ul.aqua li a:active{
+      top: 0;
+      
+    }
+
+    /*ページトップへ戻る.js*/
+    .pagetop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 15px;
+  }
+  .pagetop a {
+      display: block;
+      background-color: #ccc;
+      border-radius: 5px ;
+      text-align: center;
+      color: #222;
+      font-size: 12px;
+      text-decoration: none;
+      padding: 20px 20px;
+      opacity: 0.5;
+  }
+  .pagetop a:hover {
+      background-color: #b2d1fb;
+      border-radius: 5px;
+      text-align: center;
+      color: #fff;
+      font-size: 12px;
+      text-decoration: none;
+      padding:20px 20px;
+      opacity: 0.5;
+  }
